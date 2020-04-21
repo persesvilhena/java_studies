@@ -1,0 +1,3 @@
+O uso da interface calculavel força a implementacao dos metodos pré definidos
+na interface na classe que utilizará a interface, mantendo assim uma organizacao
+e um padrao na construcao da classe.

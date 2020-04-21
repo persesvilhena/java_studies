@@ -1,0 +1,57 @@
+package br.com.perses.gui;
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
+import javax.swing.JPanel;
+import javax.swing.JFrame;
+
+public class MenuPrincipal extends JFrame {
+
+	private JPanel jContentPane = null;
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	/**
+	 * This is the default constructor
+	 */
+	public MenuPrincipal() {
+		super();
+		initialize();
+	}
+
+	/**
+	 * This method initializes this
+	 * 
+	 * @return void
+	 */
+	private void initialize() {
+		this.setSize(300, 200);
+		this.setContentPane(getJContentPane());
+		this.setTitle("Menu Principal");
+		
+		Dimension tela=Toolkit.getDefaultToolkit().getScreenSize();
+		setSize(tela.width,tela.height);
+	}
+
+	/**
+	 * This method initializes jContentPane
+	 * 
+	 * @return javax.swing.JPanel
+	 */
+	private JPanel getJContentPane() {
+		if (jContentPane == null) {
+			jContentPane = new JPanel();
+			jContentPane.setLayout(null);
+		}
+		return jContentPane;
+	}
+
+}

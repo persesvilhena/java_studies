@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<change:ChangeDescription xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:change="http://www.eclipse.org/emf/2003/Change" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.jem.internal.beaninfo.beaninfo="http:///org/eclipse/jem/internal/beaninfo/beaninfo.ecore" xmlns:org.eclipse.jem.internal.java="java.xmi">
+  <objectChanges key="org.eclipse.jem.internal.java:JavaClass java:/javax.swing.text#DefaultFormatter">
+    <value featureName="eAnnotations">
+      <listChanges referenceValues="#//@objectsToAttach.0"/>
+    </value>
+    <value featureName="eStructuralFeatures">
+      <listChanges referenceValues="#//@objectsToAttach.1 #//@objectsToAttach.2 #//@objectsToAttach.3 #//@objectsToAttach.4"/>
+    </value>
+  </objectChanges>
+  <objectsToAttach xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:BeanDecorator" implicitDecoratorFlag="IMPLICIT_DECORATOR"/>
+  <objectsToAttach xsi:type="ecore:EReference" name="overwriteMode" eType="org.eclipse.jem.internal.java:JavaDataType java:/#boolean" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="60" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="java:/javax.swing.text#DefaultFormatter.getOverwriteMode(" writeMethod="java:/javax.swing.text#DefaultFormatter.setOverwriteMode(boolean"/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="commitsOnValidEdit" eType="org.eclipse.jem.internal.java:JavaDataType java:/#boolean" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="60" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="java:/javax.swing.text#DefaultFormatter.getCommitsOnValidEdit(" writeMethod="java:/javax.swing.text#DefaultFormatter.setCommitsOnValidEdit(boolean"/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="allowsInvalid" eType="org.eclipse.jem.internal.java:JavaDataType java:/#boolean" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="60" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" readMethod="java:/javax.swing.text#DefaultFormatter.getAllowsInvalid(" writeMethod="java:/javax.swing.text#DefaultFormatter.setAllowsInvalid(boolean"/>
+  </objectsToAttach>
+  <objectsToAttach xsi:type="ecore:EReference" name="valueClass" eType="org.eclipse.jem.internal.java:JavaClass java:/java.lang#Class<?>" unsettable="true">
+    <eAnnotations xsi:type="org.eclipse.jem.internal.beaninfo.beaninfo:PropertyDecorator" implicitlySetBits="56" implicitDecoratorFlag="IMPLICIT_DECORATOR_AND_FEATURE" writeMethod="java:/javax.swing.text#DefaultFormatter.setValueClass(java.lang.Class<?>"/>
+  </objectsToAttach>
+</change:ChangeDescription>

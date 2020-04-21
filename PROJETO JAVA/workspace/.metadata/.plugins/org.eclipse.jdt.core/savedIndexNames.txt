@@ -1,0 +1,3 @@
+INDEX VERSION 1.126+F:\PERSES\13.PENDRIVE\BACKUP2\PROJETO JAVA\workspace\.metadata\.plugins\org.eclipse.jdt.core
+1208586520.index
+2502902422.index

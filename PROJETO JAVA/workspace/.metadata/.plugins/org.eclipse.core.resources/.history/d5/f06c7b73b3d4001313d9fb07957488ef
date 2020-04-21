@@ -1,0 +1,320 @@
+package br.com.perses.gui;
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+import java.awt.Toolkit;
+
+import javax.swing.JPanel;
+import javax.swing.JFrame;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JMenu;
+import javax.swing.ImageIcon;
+
+public class MenuPrincipal extends JFrame {
+
+	private JPanel jContentPane = null;
+	private JMenuBar jJMenuPrincipal = null;
+	private JMenu jMenuCadastro = null;
+	private JMenu jMenuVendas = null;
+	private JMenu jMenuRelatorios = null;
+	private JMenu jMenuSair = null;
+	private JMenuItem jMenuItemClientes = null;
+	private JMenuItem jMenuItemFuncionarios = null;
+	private JMenuItem jMenuItemProsutos = null;
+	private JMenuItem jMenuItemUsuarios = null;
+	private JMenuItem jMenuItemVenda = null;
+	private JMenuItem jMenuItemRelatorio = null;
+	private JMenuItem jMenuItemRelatorioClientes = null;
+	private JMenuItem jMenuItemRelatorioProduto = null;
+	private JMenuItem jMenuItemRelatorioFuncionarios = null;
+	private JMenuItem jMenuItemRelatorioUsuarios = null;
+	private JMenu jMenuSobre = null;
+	private JMenu jMenuSobr = null;
+	/**
+	 * This method initializes jJMenuPrincipal	
+	 * 	
+	 * @return javax.swing.JMenuBar	
+	 */
+	private JMenuBar getJJMenuPrincipal() {
+		if (jJMenuPrincipal == null) {
+			jJMenuPrincipal = new JMenuBar();
+			jJMenuPrincipal.add(getJMenuCadastro());
+			jJMenuPrincipal.add(getJMenuVendas());
+			jJMenuPrincipal.add(getJMenuRelatorios());
+			jJMenuPrincipal.add(getJMenuSobre());
+			jJMenuPrincipal.add(getJMenuSair());
+		}
+		return jJMenuPrincipal;
+	}
+
+	/**
+	 * This method initializes jMenuCadastro	
+	 * 	
+	 * @return javax.swing.JMenu	
+	 */
+	private JMenu getJMenuCadastro() {
+		if (jMenuCadastro == null) {
+			jMenuCadastro = new JMenu();
+			jMenuCadastro.setName("Cadastro");
+			jMenuCadastro.setText("Cadastro");
+			jMenuCadastro.setIcon(new ImageIcon(getClass().getResource("/br/com/perses/imagens/1399349600_archive-insert-directory.png")));
+			jMenuCadastro.add(getJMenuItemClientes());
+			jMenuCadastro.add(getJMenuItemFuncionarios());
+			jMenuCadastro.add(getJMenuItemProsutos());
+			jMenuCadastro.add(getJMenuItemUsuarios());
+		}
+		return jMenuCadastro;
+	}
+
+	/**
+	 * This method initializes jMenuVendas	
+	 * 	
+	 * @return javax.swing.JMenu	
+	 */
+	private JMenu getJMenuVendas() {
+		if (jMenuVendas == null) {
+			jMenuVendas = new JMenu();
+			jMenuVendas.setText("Vendas");
+			jMenuVendas.setIcon(new ImageIcon(getClass().getResource("/br/com/perses/imagens/1399349795_meanicons_58.png")));
+			jMenuVendas.add(getJMenuItemVenda());
+		}
+		return jMenuVendas;
+	}
+
+	/**
+	 * This method initializes jMenuRelatorios	
+	 * 	
+	 * @return javax.swing.JMenu	
+	 */
+	private JMenu getJMenuRelatorios() {
+		if (jMenuRelatorios == null) {
+			jMenuRelatorios = new JMenu();
+			jMenuRelatorios.setText("Relatorios");
+			jMenuRelatorios.setIcon(new ImageIcon(getClass().getResource("/br/com/perses/imagens/1399349895_gnome-mime-application-vnd.lotus-1-2-3.png")));
+			jMenuRelatorios.add(getJMenuItemRelatorio());
+			jMenuRelatorios.add(getJMenuItemRelatorioClientes());
+			jMenuRelatorios.add(getJMenuItemRelatorioProduto());
+			jMenuRelatorios.add(getJMenuItemRelatorioFuncionarios());
+			jMenuRelatorios.add(getJMenuItemRelatorioUsuarios());
+		}
+		return jMenuRelatorios;
+	}
+
+	/**
+	 * This method initializes jMenuSair	
+	 * 	
+	 * @return javax.swing.JMenu	
+	 */
+	private JMenu getJMenuSair() {
+		if (jMenuSair == null) {
+			jMenuSair = new JMenu();
+			jMenuSair.setText("Sair");
+			jMenuSair.setIcon(new ImageIcon(getClass().getResource("/br/com/perses/imagens/1399349490_cross.png")));
+		}
+		return jMenuSair;
+	}
+
+	/**
+	 * This method initializes jMenuItemClientes	
+	 * 	
+	 * @return javax.swing.JMenuItem	
+	 */
+	private JMenuItem getJMenuItemClientes() {
+		if (jMenuItemClientes == null) {
+			jMenuItemClientes = new JMenuItem();
+			jMenuItemClientes.setText("Clientes");
+		}
+		return jMenuItemClientes;
+	}
+
+	/**
+	 * This method initializes jMenuItemFuncionarios	
+	 * 	
+	 * @return javax.swing.JMenuItem	
+	 */
+	private JMenuItem getJMenuItemFuncionarios() {
+		if (jMenuItemFuncionarios == null) {
+			jMenuItemFuncionarios = new JMenuItem();
+			jMenuItemFuncionarios.setText("Funcionarios");
+		}
+		return jMenuItemFuncionarios;
+	}
+
+	/**
+	 * This method initializes jMenuItemProsutos	
+	 * 	
+	 * @return javax.swing.JMenuItem	
+	 */
+	private JMenuItem getJMenuItemProsutos() {
+		if (jMenuItemProsutos == null) {
+			jMenuItemProsutos = new JMenuItem();
+			jMenuItemProsutos.setText("Produtos");
+		}
+		return jMenuItemProsutos;
+	}
+
+	/**
+	 * This method initializes jMenuItemUsuarios	
+	 * 	
+	 * @return javax.swing.JMenuItem	
+	 */
+	private JMenuItem getJMenuItemUsuarios() {
+		if (jMenuItemUsuarios == null) {
+			jMenuItemUsuarios = new JMenuItem();
+			jMenuItemUsuarios.setText("Usuarios");
+		}
+		return jMenuItemUsuarios;
+	}
+
+	/**
+	 * This method initializes jMenuItemVenda	
+	 * 	
+	 * @return javax.swing.JMenuItem	
+	 */
+	private JMenuItem getJMenuItemVenda() {
+		if (jMenuItemVenda == null) {
+			jMenuItemVenda = new JMenuItem();
+			jMenuItemVenda.setText("Venda");
+		}
+		return jMenuItemVenda;
+	}
+
+	/**
+	 * This method initializes jMenuItemRelatorio	
+	 * 	
+	 * @return javax.swing.JMenuItem	
+	 */
+	private JMenuItem getJMenuItemRelatorio() {
+		if (jMenuItemRelatorio == null) {
+			jMenuItemRelatorio = new JMenuItem();
+			jMenuItemRelatorio.setText("Relatório Vendas");
+		}
+		return jMenuItemRelatorio;
+	}
+
+	/**
+	 * This method initializes jMenuItemRelatorioClientes	
+	 * 	
+	 * @return javax.swing.JMenuItem	
+	 */
+	private JMenuItem getJMenuItemRelatorioClientes() {
+		if (jMenuItemRelatorioClientes == null) {
+			jMenuItemRelatorioClientes = new JMenuItem();
+			jMenuItemRelatorioClientes.setMnemonic(java.awt.event.KeyEvent.VK_UNDEFINED);
+			jMenuItemRelatorioClientes.setText("Relátorio Clientes");
+		}
+		return jMenuItemRelatorioClientes;
+	}
+
+	/**
+	 * This method initializes jMenuItemRelatorioProduto	
+	 * 	
+	 * @return javax.swing.JMenuItem	
+	 */
+	private JMenuItem getJMenuItemRelatorioProduto() {
+		if (jMenuItemRelatorioProduto == null) {
+			jMenuItemRelatorioProduto = new JMenuItem();
+			jMenuItemRelatorioProduto.setText("Relatório Produto");
+		}
+		return jMenuItemRelatorioProduto;
+	}
+
+	/**
+	 * This method initializes jMenuItemRelatorioFuncionarios	
+	 * 	
+	 * @return javax.swing.JMenuItem	
+	 */
+	private JMenuItem getJMenuItemRelatorioFuncionarios() {
+		if (jMenuItemRelatorioFuncionarios == null) {
+			jMenuItemRelatorioFuncionarios = new JMenuItem();
+			jMenuItemRelatorioFuncionarios.setText("Relatório Funcionarios");
+		}
+		return jMenuItemRelatorioFuncionarios;
+	}
+
+	/**
+	 * This method initializes jMenuItemRelatorioUsuarios	
+	 * 	
+	 * @return javax.swing.JMenuItem	
+	 */
+	private JMenuItem getJMenuItemRelatorioUsuarios() {
+		if (jMenuItemRelatorioUsuarios == null) {
+			jMenuItemRelatorioUsuarios = new JMenuItem();
+			jMenuItemRelatorioUsuarios.setText("Relatório Usuários");
+		}
+		return jMenuItemRelatorioUsuarios;
+	}
+
+	/**
+	 * This method initializes jMenuSobre	
+	 * 	
+	 * @return javax.swing.JMenu	
+	 */
+	private JMenu getJMenuSobre() {
+		if (jMenuSobre == null) {
+			jMenuSobre = new JMenu();
+			jMenuSobre.setText("Sobre");
+			jMenuSobre.setIcon(new ImageIcon(getClass().getResource("/br/com/perses/imagens/Actions-help-about-icon2.png")));
+			jMenuSobre.add(getJMenuSobr());
+		}
+		return jMenuSobre;
+	}
+
+	/**
+	 * This method initializes jMenuSobr	
+	 * 	
+	 * @return javax.swing.JMenu	
+	 */
+	private JMenu getJMenuSobr() {
+		if (jMenuSobr == null) {
+			jMenuSobr = new JMenu();
+		}
+		return jMenuSobr;
+	}
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+	/**
+	 * This is the default constructor
+	 */
+	public MenuPrincipal() {
+		super();
+		initialize();
+	}
+
+	/**
+	 * This method initializes this
+	 * 
+	 * @return void
+	 */
+	private void initialize() {
+		this.setSize(540, 200);
+		this.setJMenuBar(getJJMenuPrincipal());
+		this.setContentPane(getJContentPane());
+		this.setTitle("Menu Principal");
+		
+		Dimension tela=Toolkit.getDefaultToolkit().getScreenSize();
+		setSize(tela.width,tela.height);
+	}
+
+	/**
+	 * This method initializes jContentPane
+	 * 
+	 * @return javax.swing.JPanel
+	 */
+	private JPanel getJContentPane() {
+		if (jContentPane == null) {
+			jContentPane = new JPanel();
+			jContentPane.setLayout(null);
+		}
+		return jContentPane;
+	}
+
+}  //  @jve:decl-index=0:visual-constraint="10,10"
